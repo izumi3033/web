@@ -1,0 +1,325 @@
+/* ベースリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* フォント */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f9fbfd;
+    color: #2c2c2c;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* コンテナ */
+  .container {
+    max-width: 900px;
+    margin: 50px auto 70px auto;
+    padding: 0 24px;
+  }
+  
+  /* ヘッダー */
+  header {
+    background: linear-gradient(135deg, #6a6de7, #8a54c7);
+    color: white;
+    padding: 60px 24px 65px 24px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(106, 109, 231, 0.35);
+    margin-bottom: 60px;
+    user-select: none;
+    transition: box-shadow 0.3s ease;
+  }
+  header:hover {
+    box-shadow: 0 16px 40px rgba(106, 109, 231, 0.55);
+  }
+  
+  header h1 {
+    font-weight: 800;
+    font-size: 3.6rem;
+    margin-bottom: 12px;
+    letter-spacing: 2.8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  header p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    opacity: 0.88;
+    letter-spacing: 0.05em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* セクション見出し */
+  h2 {
+    font-size: 2.3rem;
+    color: #4a4a4a;
+    margin-bottom: 28px;
+    position: relative;
+    padding-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 60px;
+    background: #8a54c7;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(138, 84, 199, 0.45);
+  }
+  
+  /* about セクション */
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    background: white;
+    padding: 38px 38px 38px 38px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  .about-content:hover {
+    transform: translateY(-6px);
+  }
+  
+  .profile-photo {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #8a54c7;
+    box-shadow: 0 8px 24px rgba(138, 84, 199, 0.55);
+    flex-shrink: 0;
+    transition: box-shadow 0.3s ease;
+  }
+  .profile-photo:hover {
+    box-shadow: 0 12px 36px rgba(138, 84, 199, 0.75);
+  }
+  
+  .about-content p {
+    font-size: 1.15rem;
+    color: #4a4a4a;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+  
+  /* skills セクション */
+  .skills {
+    margin-top: 70px;
+    background: white;
+    padding: 38px 38px 38px 38px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    user-select: none;
+  }
+  
+  .skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .skills li {
+    background: #6a6de7;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(106, 109, 231, 0.55);
+    flex: 1 1 38%;
+    text-align: center;
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+    cursor: default;
+    user-select: none;
+  }
+  
+  .skills li:hover {
+    background: #8a54c7;
+    box-shadow: 0 8px 25px rgba(138, 84, 199, 0.7);
+  }
+  
+  /* contact セクション */
+  .contact {
+    margin-top: 70px;
+    background: white;
+    padding: 48px 38px 48px 38px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  }
+  
+  .contact p {
+    margin-bottom: 32px;
+    font-size: 1.15rem;
+    color: #444;
+    letter-spacing: 0.025em;
+  }
+  
+  /* フォーム */
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 16px 20px;
+    font-size: 1.05rem;
+    border: 2.5px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+    background: #fafafa;
+    resize: vertical;
+    color: #222;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
+  }
+  
+  .contact input:focus,
+  .contact textarea:focus {
+    border-color: #8a54c7;
+    outline: none;
+    box-shadow: 0 0 14px rgba(138, 84, 199, 0.5);
+  }
+  
+  .contact textarea {
+    min-height: 150px;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  
+  /* ボタン */
+  .btn {
+    background: linear-gradient(135deg, #8a54c7, #6a6de7);
+    color: white;
+    font-weight: 800;
+    border: none;
+    padding: 18px 0;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    box-shadow: 0 8px 25px rgba(138, 84, 199, 0.65);
+    transition: background 0.45s ease, box-shadow 0.45s ease, transform 0.3s ease;
+    user-select: none;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background: linear-gradient(135deg, #a47de6, #7d6be9);
+    box-shadow: 0 12px 35px rgba(164, 125, 230, 0.85);
+    transform: translateY(-4px);
+    outline: none;
+  }
+  
+  /* 送信後メッセージ */
+  #response-msg {
+    margin-top: 24px;
+    font-weight: 700;
+    color: #4caf50;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+    user-select: none;
+  }
+  
+  /* レスポンシブ */
+  @media (max-width: 720px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-photo {
+      margin-bottom: 26px;
+      width: 150px;
+      height: 150px;
+    }
+  
+    .skills ul {
+      flex-direction: column;
+    }
+  
+    .skills li {
+      flex: 1 1 100%;
+    }
+  }
+  
+  /* 送信完了ページ用スタイル */
+  .thank-you-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f4f8;
+    padding: 20px;
+    user-select: none;
+  }
+  
+  .thank-you-content {
+    background: #fff;
+    padding: 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    max-width: 520px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .thank-you-content:hover {
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.15);
+  }
+  
+  .thank-you-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #2c2c2c;
+    letter-spacing: 0.05em;
+    font-weight: 800;
+  }
+  
+  .thank-you-content p {
+    font-size: 1.18rem;
+    color: #555;
+    margin-bottom: 36px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+  
+  /* thank-youページボタン */
+  .thank-you-content .btn {
+    display: inline-block;
+    background: #8a54c7;
+    color: white;
+    text-decoration: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(138, 84, 199, 0.7);
+  }
+  
+  .thank-you-content .btn:hover,
+  .thank-you-content .btn:focus {
+    background: #7d42b9;
+    box-shadow: 0 12px 35px rgba(125, 66, 185, 0.85);
+    transform: translateY(-3px);
+    outline: none;
+  }
+  
